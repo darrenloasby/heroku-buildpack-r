@@ -186,20 +186,20 @@ topic "Vendoring R $R_VERSION for $STACK stack ($BUILD_PACK_VERSION)"
 pushd $BUILD_DIR > /dev/null
 
 # check cache
-CACHE_KEY="$STACK-$R_VERSION-$BUILD_PACK_VERSION.tar.gz"
-if [[ -f "$CACHE_DIR/$CACHE_KEY" ]]; then
+# CACHE_KEY="$STACK-$R_VERSION-$BUILD_PACK_VERSION.tar.gz"
+# if [[ -f "$CACHE_DIR/$CACHE_KEY" ]]; then
 
-  echo "Retrieving R binaries from cache" | indent
-  tar xzf "$CACHE_DIR/$CACHE_KEY" -C .
+#   echo "Retrieving R binaries from cache" | indent
+#   tar xzf "$CACHE_DIR/$CACHE_KEY" -C .
 
-else
+# else
 
-  # download and unpack binaries
-  echo "Downloading and unpacking R binaries ($R_BINARIES)" | indent
+#   # download and unpack binaries
+#   echo "Downloading and unpacking R binaries ($R_BINARIES)" | indent
 
-  curl $R_BINARIES -s -o - | tar xzf - -C .
+#   #curl $R_BINARIES -s -o - | tar xzf - -C .
 
-fi
+# fi
 
 popd > /dev/null
 
