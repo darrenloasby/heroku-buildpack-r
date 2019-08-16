@@ -15,4 +15,5 @@ echo "Launching ${COMMAND}..."
 eval "${COMMAND}" &
 
 echo "Launching apache"
-exec /app/apache/sbin/httpd -DFOREGROUND -DNO_DETACH
+#exec /app/apache/sbin/httpd -DFOREGROUND -DNO_DETACH
+while true; do sleep 10; done
